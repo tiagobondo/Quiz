@@ -1,23 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native'
 
-import {Quiz} from './src/components/Quiz'
-
+import {Router} from './src/routes'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Quiz/>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Router/>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#2196f3',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

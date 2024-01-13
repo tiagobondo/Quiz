@@ -5,13 +5,14 @@ const styles = StyleSheet.create({
     width:'100%',
     flex:1,
     alignItems:'center',
-    paddingTop:70
+    paddingTop:70,
+    backgroundColor:'#12a4d9'
   },
 
   containerQuestao:{
     marginTop:20,
     width:'97%',
-    height:'15%',
+    height:'16%',
     backgroundColor:'#00000069',
     marginBottom:20,
     borderRadius:10,
