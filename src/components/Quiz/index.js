@@ -115,6 +115,9 @@ export default function Quiz(){
   return (
     <View style={styles.containerQuiz}>
        <Title/>
+       <View style={styles.progreEstatic}>
+        </View>
+
       <Text style={styles.pontos}>Pontos : {pontos}</Text>
 
      <View style={styles.containerQuestao}>
@@ -122,7 +125,7 @@ export default function Quiz(){
      </View>
 
       {questaoAtual.opcoes.map((option, index) => (
-        <TouchableOpacity key={index} onPress={() => checkAnswer(option)} style={styles.respostas}>
+        <TouchableOpacity key={index} onPress={() => checkAnswer(option)} style={styles.respostas} activeOpacity={0.5}>
          <Text style={styles.textQuestoes}> {option}</Text>
         </TouchableOpacity>
       ))}

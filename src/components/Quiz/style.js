@@ -9,13 +9,21 @@ const styles = StyleSheet.create({
     backgroundColor:'#12a4d9'
   },
 
+  progreEstatic: {
+    height:5,
+    width:'90%',
+    backgroundColor:'red',
+    borderRadius:1,
+    borderWidth:1,
+    borderColor: '#fff'
+  },
+
   containerQuestao:{
-    marginTop:20,
     width:'97%',
     height:'16%',
     backgroundColor:'#00000069',
     marginBottom:20,
-    borderRadius:10,
+    borderRadius:30,
     padding:20,
   },
 
@@ -50,7 +58,7 @@ const styles = StyleSheet.create({
     fontSize:16,
     color:'#fff',
     fontWeight:'bold',
-    marginTop:'2%'
+    marginTop:'10%',
   },
 
   containerHelp: {
