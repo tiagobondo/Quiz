@@ -18,16 +18,16 @@ export default function Home(props){
         <Text style={styles.textPlay}>Jogar</Text>
     </TouchableOpacity>
 
-    <TouchableOpacity style={styles.buttonAbout} onPress={()=>props.navigation.navigate('About')} activeOpacity={0.7}>
-        <Text style={styles.textAbout}>Acerca</Text>
+    <TouchableOpacity style={styles.buttonHome} onPress={()=>props.navigation.navigate('About')} activeOpacity={0.7}>
+        <Text style={styles.textButtonHome}>Acerca</Text>
     </TouchableOpacity>
 
-    <TouchableOpacity style={styles.buttonOptions} onPress={()=>props.navigation.navigate('Options')} activeOpacity={0.7}>
-        <Text style={styles.textOptions}>Opções</Text>
+    <TouchableOpacity style={styles.buttonHome} onPress={()=>props.navigation.navigate('Options')} activeOpacity={0.7}>
+        <Text style={styles.textButtonHome}>Opções</Text>
     </TouchableOpacity>
 
-    <TouchableOpacity style={styles.buttonExit} onPress={()=>alert('Sair')} activeOpacity={0.7}>
-        <Text style={styles.textExit}>Sair</Text>
+    <TouchableOpacity style={styles.buttonHome} onPress={()=>alert('Sair')} activeOpacity={0.7}>
+        <Text style={styles.textButtonHome}>Sair</Text>
     </TouchableOpacity>
 
     </View>
