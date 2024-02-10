@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -12,7 +12,9 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
+    
     <NavigationContainer>
+      <StatusBar backgroundColor={'#fff'} barStyle={'dark-content'}/>
       <Stack.Navigator>
           <Stack.Screen
             name='Home'
@@ -26,7 +28,12 @@ export default function App() {
             name='About'
             component={About}
             options={{
-              headerShown:false
+              headerShown:true,
+              headerTitle: 'Acerca',
+              headerStyle: {
+                backgroundColor: '#12a4d9',
+              },
+              headerTintColor: '#fff'
             }}
           />
 
@@ -34,7 +41,12 @@ export default function App() {
             name='Options'
             component={Options}
             options={{
-              headerShown:false
+              headerShown:true,
+              headerTitle: 'Opções',
+              headerStyle: {
+                backgroundColor: '#12a4d9',
+              },
+              headerTintColor: '#fff'
             }}
           />
 

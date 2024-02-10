@@ -7,13 +7,14 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent: 'center',
     padding: 10,
-    paddingTop:'10%'
+
   },
   
   textAbout: {
     fontSize: 16,
-    color: '#fff',
-    textAlign:'justify'
+    color: '#0009',
+    textAlign:'justify',
+    marginBottom: 10
   },
 
 

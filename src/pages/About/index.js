@@ -2,19 +2,49 @@ import {
     View,
     Text,
     FlatList,
-    ScrollView
+    ScrollView,
+    StatusBar
 } from 'react-native'
 
 import {styles} from './style'
+
 export default function About(){
   return(
     
       <View style={styles.container}>
+        <StatusBar backgroundColor={"#fff"} barStyle={'dark-content'}/>
       <ScrollView>
-
-      <Text>Instituto médio politécnico do Uíge</Text>
-       <Text style={styles.textAbout}>Instituto Médio Politécnico do Uíge (IMPU) anteriormente chamado de “Instituto Médio Politécnico Manuel Quarta Punza”, entrou em funcionamento um ano antes da sua inauguração oficial. inaugurado no dia 03 de janeiro de 2010 pelo Ex Ministro da Educação, é uma escola médio-técnico angolano e de propriedade do Ministério da Educação de Angola. O nome referido é uma homenagem ao guerrilheiro angolano e aquele que um dia foi Governador da província do Uíge Manuel Quarta Punza. Este estabelecimento de ensino Técnico, em função da sua especificidade, visa proporcionar aos alunos conhecimentos gerais e técnicos para os diferentes ramos de actividade socioeconómico do País. Permitindo a inserção dos mesmos na vida profissional e o acesso á Universidade. O Instituto Médio Politécnico do Uíge está localizado na província do Uíge município do Uíge. Nos termos da lei, o IMPU é uma entidade jurídica de direito, com estatuto de estabelecimento público, dotado de autonomia estatutária, pedagógica, administrativa, técnico-científica, disciplinar e financeira, destinada a formação técnico-profissional. Como instrumento jurídico-legal, o decreto ministerial nº 155/08, de 30 de junho e publicado no diário da república nº 141, 1º serie, oficializa o seu funcionamento. 
+    
+       <Text style={styles.textAbout}>
+            Conheço o IMPU é um jogo de perguntas e respostas que visa avaliar o jogador até que ponto conhece o instituto médio politécnico do Uíge "IMPU". Desenvolvido com o intuito de testar conhecimento de cada jogador apenas.
        </Text>
+
+       <Text style={styles.textAbout}>MIT License</Text>
+       <Text  style={styles.textAbout}>
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        </Text>
+
+        <Text  style={styles.textAbout}>
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        </Text>
+
+        <Text  style={styles.textAbout}>
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+       </Text>
+
+       <Text style={styles.textAbout}>Copyright (c) 2024 Tiago Pedro Menenga Bondo</Text>
        
        </ScrollView>
     </View> 

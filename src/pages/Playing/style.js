@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     width:'100%',
     flex:1,
     alignItems:'center',
-    paddingTop:70,
+    paddingTop:40,
     backgroundColor:'#12a4d9'
   },
 
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     width:'97%',
     height:'16%',
     backgroundColor:'#00000069',
-    marginBottom:20,
+    marginBottom:10,
     borderRadius:30,
     padding:20,
   },
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 
   respostas: {
     width:'97%',
-    height:40,
+    height:45,
     fontSize:16,
     textAlign:'center',
     backgroundColor:'#d4002e',
@@ -194,6 +194,44 @@ const styles = StyleSheet.create({
     textAlign:'center',
     fontSize:18,
     color: '#d4002e'
+  },
+  containerEnd: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#12a4d9'
+  },
+
+  titleCongratulations: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#fff'
+  },
+
+  buttonPlayAgain: {
+    marginTop: 10,
+    width:'97%',
+    height:45,
+    backgroundColor:'#d4002e',
+    borderRadius:5,
+    borderWidth:1,
+    borderColor:'#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    bottom: 5
+  },
+
+  textPlayAgain: {
+    fontSize: 18,
+    color: '#fff'
+  },
+
+  subtitle: {
+    textAlign: 'center',
+    fontSize: 16,
+    color: '#fff',
+    marginHorizontal: '5%'
   }
 
 

@@ -5,8 +5,14 @@ const styles = StyleSheet.create({
     flex:1,
     backgroundColor:'#12a4d9',
     alignItems:'center',
-    paddingTop:'10%'
+    padding: 10,
+  },
 
+  textOptions: {
+    fontSize: 16,
+    color: '#0009',
+    textAlign:'justify',
+    marginBottom: 10
   }
 })
 

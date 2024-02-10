@@ -98,6 +98,7 @@ export default function Quiz(props){
         
     }
     else{
+      props.navigation.navigate('Home')
       Alert.alert('Resposta Errada!')
       setPontos(0) 
     }
@@ -117,7 +118,14 @@ export default function Quiz(props){
       return <View style={styles.containerLoading}><Text style={styles.textLoading}>Processando...</Text></View>
     }
     else{
-      return <Text>Quiz completo!{pontos}</Text>
+      return <View style={styles.containerEnd}>
+              <Text style={styles.titleCongratulations}>Parabéns!</Text>
+              <Text style={styles.subtitle}> Você terminou o jogo com êxito obtendo {pontos} pontos.</Text>
+
+              <TouchableOpacity style={styles.buttonPlayAgain} onPress={()=>props.navigation.navigate('Home')}>
+                <Text style={styles.textPlayAgain}>Recomeçar</Text>
+              </TouchableOpacity>
+      </View>
     }
     
   }
