@@ -59,6 +59,7 @@ export default function Quiz(props){
   const [questaoUsada, setQuestaoUsada] = useState([]);
   const [questaoAtual, setQuestaoAtual] = useState(null);
   const [modalConfirmation, setModalConfirmation] = useState(false)
+  const [visButton, setVisButton] = useState('none')
 
   useEffect(() => {
     setNextQuestion();
@@ -108,7 +109,8 @@ export default function Quiz(props){
 
   const respostaAjuda = () =>{
     const resposta = questaoAtual.respostaCerta
-    Alert.alert('A respota certa é '+ resposta)
+    Alert.alert(' ' ,'A resposta certa é ' + resposta )
+    setVisButton('flex')
   }
 
   if (!questaoAtual) {
@@ -163,13 +165,17 @@ export default function Quiz(props){
           <Text style={styles.questao}>{questaoAtual.questao}</Text>
      </View>
 
-      {questaoAtual.opcoes.map((option, index) => (
+      {
+       
+      questaoAtual.opcoes.map((option, index) => (
         <TouchableOpacity key={index} onPress={() => checkAnswer(option)} style={styles.respostas} activeOpacity={0.5}>
-         <Text style={styles.textQuestoes}> {option}</Text>
+         <Text style={styles.textQuestoes}>{option}</Text>
         </TouchableOpacity>
-      ))}
+      ))
+      }
 
       <View style={styles.containerHelp}>
+
         <TouchableOpacity onPress={()=>respostaAjuda()} activeOpacity={0.5}>
           <AntDesign style={styles.buttonCerta}
             name='check'
@@ -178,6 +184,19 @@ export default function Quiz(props){
           />
            <Text style={styles.textCerta}>Apoio1</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity onPress={()=>Alert.alert('Informamos que...', 'Já utilizou o seu apoio1')} activeOpacity={0.5} style={[styles.buttonCerta2,
+          {display:visButton}
+        ]}>
+          <AntDesign style={styles.buttonCerta}
+            name='check'
+            size={30}
+            color={'#fff'}
+          />
+           <Text style={styles.textCerta}>Apoio1</Text>
+        </TouchableOpacity>
+
+        
        
 
         <TouchableOpacity onPress={()=>setModalConfirmation(true)} activeOpacity={0.5}>

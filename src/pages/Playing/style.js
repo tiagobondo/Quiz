@@ -82,6 +82,10 @@ const styles = StyleSheet.create({
     marginRight:10
   },
 
+  buttonCerta2:{
+    position: 'absolute',
+},
+
   buttonDesistir:{
     height:50,
     width:50,
