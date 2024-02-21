@@ -1,13 +1,19 @@
 import {
         View,
         Text,
-        TouchableOpacity
+        TouchableOpacity,
+        BackHandler
 } from 'react-native';
 
 import {Title} from '../../components/Title'
 import {styles} from './style'
 
 export default function Home(props){
+
+    const closeApp = ()=>{
+        BackHandler.exitApp()
+    }
+
   return(
     <View style={styles.container}>
 
@@ -26,7 +32,7 @@ export default function Home(props){
         <Text style={styles.textButtonHome}>Opções</Text>
     </TouchableOpacity>
 
-    <TouchableOpacity style={styles.buttonHome} onPress={()=>alert('Sair')} activeOpacity={0.7}>
+    <TouchableOpacity style={styles.buttonHome} onPress={()=>closeApp()} activeOpacity={0.7}>
         <Text style={styles.textButtonHome}>Sair</Text>
     </TouchableOpacity>
 
