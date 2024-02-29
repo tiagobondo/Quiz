@@ -33,7 +33,7 @@ export default function Quiz(props){
       respostaCerta: '6' 
     },
     { id: 4,
-      questao: 'O nome Manuel Quarta Punza é homenagem ao...?',
+      questao: 'O nome Manuel Quarta Punza foi homenagem ao...?',
       opcoes: ['1ºGovernador da província do Uíge', '6ºGovernador da província do Uíge', '1ºPresidente da república','2ºGovernador da província do Uíge'],
       respostaCerta: '6ºGovernador da província do Uíge' 
     },
@@ -51,7 +51,71 @@ export default function Quiz(props){
       questao: 'Qual dos cursos não é ministrado no IMPU?',
       opcoes: ['Técnico de frio e climatização', 'Técnico de informática', 'Técnico de energias renováveis','Técnico de construção cívil'],
       respostaCerta: 'Técnico de frio e climatização' 
+    },
+    { id: 8,
+      questao: 'Qual é o nome do primeiro director geral do IMPU?',
+      opcoes: ['Manuel Distinto Fernando', 'Jorge António', 'António Sequeira','Adolfo Raimundo'],
+      respostaCerta: 'Jorge António' 
+    },
+    { id: 9,
+      questao: 'Qual é o nome do segundo director geral do IMPU?',
+      opcoes: ['Manuel Distinto Fernando', 'Jorge António','Adolfo Raimundo', 'António Sequeira'],
+      respostaCerta: 'António Sequeira' 
+    },
+    { id: 10,
+      questao: 'Qual é o nome do terceiro director geral do IMPU?',
+      opcoes: ['Jorge António','Adolfo Raimundo', 'António Sequeira','Manuel Distinto Fernando'],
+      respostaCerta: 'Manuel Distinto Fernando' 
+    },
+    { id: 12,
+      questao: 'Qual é o nome do terceiro director geral do IMPU?',
+      opcoes: ['Jorge António','Adolfo Raimundo', 'António Sequeira','Manuel Fernando'],
+      respostaCerta: 'Manuel Fernando' 
+    },
+    { id: 13,
+      questao: 'Quem foi Adolfo Raimundo?',
+      opcoes: ['Director Pedagógico', 'Director Geral','Director Administrativo', 'Secretário'],
+      respostaCerta: 'Director Pedagógico' 
+    },
+    { id: 14,
+      questao: 'Qual é o nome da primeira mulher na área administrativa?',
+      opcoes: ['Irondina José Bengui', 'Maria Filomena dos Anjos','Marta Lídia Raúl Silvestre', 'Berta Zacarias'],
+      respostaCerta: 'Maria Filomena dos Anjos' 
+    },
+    { id: 15,
+      questao: 'Qual é o nome da segunda mulher na área administrativa?',
+      opcoes: ['Maria Filomena dos Anjos','Marta Lídia Raúl Silvestre','Irondina José Bengui', 'Berta Zacarias'],
+      respostaCerta: 'Irondina José Bengui' 
+    },
+    { id: 16,
+      questao: 'De 2009 à 2024 quantos directores gerais já passaram no IMPU?',
+      opcoes: ['5','2','4', '3'],
+      respostaCerta: '3' 
+    },
+    { id: 17,
+      questao: 'Em que ano foi implementado a biblioteca no IMPU?',
+      opcoes: ['2011','2009','2013', '2010'],
+      respostaCerta: '2011' 
+    },
+    { id: 18,
+      questao: 'Em que ano foi realizada a IªFeira empreendedora no IMPU?',
+      opcoes: ['2020','2023','2022', '2024'],
+      respostaCerta: '2023' 
+    },
+    { id: 19,
+      questao: 'Em que ano a equipa de voleibol do IMPU foi para Cabinda?',
+      opcoes: ['2014','2019','2023', '2012'],
+      respostaCerta: '2023' 
+    },
+    { id: 20,
+      questao: 'Irondina José Bengui antes de ser directora administrativa foi...?',
+      opcoes: ['Professora de empreendedorismo','Professora de OGI','Professora de PT', 'Professora de FAI'],
+      respostaCerta: 'Professora de empreendedorismo' 
     }
+   
+    
+
+
   ]);
 
   //Estado com os valores iniciais
