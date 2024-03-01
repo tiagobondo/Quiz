@@ -67,47 +67,42 @@ export default function Quiz(props){
       opcoes: ['Jorge António','Adolfo Raimundo', 'António Sequeira','Manuel Distinto Fernando'],
       respostaCerta: 'Manuel Distinto Fernando' 
     },
-    { id: 12,
-      questao: 'Qual é o nome do terceiro director geral do IMPU?',
-      opcoes: ['Jorge António','Adolfo Raimundo', 'António Sequeira','Manuel Fernando'],
-      respostaCerta: 'Manuel Fernando' 
-    },
-    { id: 13,
+    { id: 11,
       questao: 'Quem foi Adolfo Raimundo?',
       opcoes: ['Director Pedagógico', 'Director Geral','Director Administrativo', 'Secretário'],
       respostaCerta: 'Director Pedagógico' 
     },
-    { id: 14,
+    { id: 12,
       questao: 'Qual é o nome da primeira mulher na área administrativa?',
       opcoes: ['Irondina José Bengui', 'Maria Filomena dos Anjos','Marta Lídia Raúl Silvestre', 'Berta Zacarias'],
       respostaCerta: 'Maria Filomena dos Anjos' 
     },
-    { id: 15,
+    { id: 13,
       questao: 'Qual é o nome da segunda mulher na área administrativa?',
       opcoes: ['Maria Filomena dos Anjos','Marta Lídia Raúl Silvestre','Irondina José Bengui', 'Berta Zacarias'],
       respostaCerta: 'Irondina José Bengui' 
     },
-    { id: 16,
+    { id: 14,
       questao: 'De 2009 à 2024 quantos directores gerais já passaram no IMPU?',
       opcoes: ['5','2','4', '3'],
       respostaCerta: '3' 
     },
-    { id: 17,
+    { id: 15,
       questao: 'Em que ano foi implementado a biblioteca no IMPU?',
       opcoes: ['2011','2009','2013', '2010'],
       respostaCerta: '2011' 
     },
-    { id: 18,
+    { id: 16,
       questao: 'Em que ano foi realizada a IªFeira empreendedora no IMPU?',
       opcoes: ['2020','2023','2022', '2024'],
       respostaCerta: '2023' 
     },
-    { id: 19,
+    { id: 17,
       questao: 'Em que ano a equipa de voleibol do IMPU foi para Cabinda?',
       opcoes: ['2014','2019','2023', '2012'],
       respostaCerta: '2023' 
     },
-    { id: 20,
+    { id: 18,
       questao: 'Irondina José Bengui antes de ser directora administrativa foi...?',
       opcoes: ['Professora de empreendedorismo','Professora de OGI','Professora de PT', 'Professora de FAI'],
       respostaCerta: 'Professora de empreendedorismo' 

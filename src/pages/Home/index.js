@@ -1,3 +1,4 @@
+import Recat, { useState } from 'react'
 import {
         View,
         Text,
@@ -5,6 +6,7 @@ import {
         BackHandler
 } from 'react-native';
 //import Sound from 'react-native-sound'
+import { Audio } from 'expo-av'
 
 import {Title} from '../../components/Title'
 import {styles} from './style'
@@ -15,26 +17,21 @@ export default function Home(props){
         BackHandler.exitApp()
     }
 
-   /* const som = new Sound('../../../assets/audios/sound.mp3', null, (erro)=>{
-        if(erro){
-            console.log(erro)
-        }
-    })
+   const loading = async()=>{   
+        const som = new Audio.Sound();
+        try{
+            await som.loadAsync(require('../../../assets/audios/sound.mp3'));
+            await som.playAsync();
 
-    const loading = ()=>{
-        som.play((sucess)=>{
-            if(sucess){
-                console.log('Reprodux')
-            }
-            else{
-                console.log('Erro')
-            }
-        })
-    }
-    */
+        }catch(error){
+            console.log('Erro', error)
+        }
+
+
+   }
 
   return(
-    <View style={styles.container}>
+    <View style={styles.container} onLayout={()=>loading()}>
 
       <Text style={styles.Title}>Seja Bem-Vindo ao</Text>
       <Text style={styles.SubTitle}>Conheço o IMPU</Text>
