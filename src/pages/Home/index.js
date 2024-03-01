@@ -4,6 +4,7 @@ import {
         TouchableOpacity,
         BackHandler
 } from 'react-native';
+//import Sound from 'react-native-sound'
 
 import {Title} from '../../components/Title'
 import {styles} from './style'
@@ -13,6 +14,24 @@ export default function Home(props){
     const closeApp = ()=>{
         BackHandler.exitApp()
     }
+
+   /* const som = new Sound('../../../assets/audios/sound.mp3', null, (erro)=>{
+        if(erro){
+            console.log(erro)
+        }
+    })
+
+    const loading = ()=>{
+        som.play((sucess)=>{
+            if(sucess){
+                console.log('Reprodux')
+            }
+            else{
+                console.log('Erro')
+            }
+        })
+    }
+    */
 
   return(
     <View style={styles.container}>
