@@ -16,10 +16,12 @@ export default function About(){
       <ScrollView>
     
        <Text style={styles.textAbout}>
-            Conheço o IMPU é um jogo de perguntas e respostas que visa avaliar o jogador até que ponto conhece o instituto médio politécnico do Uíge "IMPU". Desenvolvido com o intuito de testar conhecimento de cada jogador apenas.
+       "Conheço o IMPU" não é apenas um simples jogo de perguntas e respostas; é uma jornada educativa que o levará a explorar os diversos aspectos deste renomado instituto. Desde sua criação, este jogo poderá ser uma ferramenta valiosa para divulgar informações sobre o Instituto Médio Politécnico do Uíge, desafiando os jogadores a testarem seu conhecimento.
        </Text>
 
+       <Text style={styles.textAbout}>Música: Alan Walker  Alone Lyrics</Text>
        <Text style={styles.textAbout}>MIT License</Text>
+
        <Text  style={styles.textAbout}>
         Permission is hereby granted, free of charge, to any person obtaining a copy
         of this software and associated documentation files (the "Software"), to deal
