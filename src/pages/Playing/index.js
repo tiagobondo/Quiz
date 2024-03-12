@@ -141,7 +141,7 @@ export default function Quiz(props){
     }
   };
 
-  const checkAnswer = (selectedOption) => {
+  const checkAnswer = async(selectedOption) => {
     // faça o que for necessário para verificar a resposta selecionada
     const resposta = questaoAtual.respostaCerta;
 
@@ -149,9 +149,7 @@ export default function Quiz(props){
       setPontos(resultado = pontos + 2)
 
       //Se a questão for correcta então reproduza o aúdio dizendo resposta correcta
-      const loadingMusic1 = async()=>{
         const som = new Audio.Sound()
-
         try{
           await som.loadAsync(require('../../../assets/audios/correta.mp3'))
           await som.playAsync();
@@ -159,36 +157,25 @@ export default function Quiz(props){
         }catch(error){
           console.log(error)
         }
-      }
-      loadingMusic1()
-      Alert.alert('Resposta Certa!')
+        await som.stopAsync();
 
-      //Se já arrecadou 24 pontos então vá para a 2ª fase do jogo
-      if(resultado == 24){
-        
-      }
-      else{
-        setNextQuestion();
-      }
-        
+      Alert.alert('Resposta Correcta!')
+        setNextQuestion();   
     }
     else{
 
       //Se a questão for errada então reproduza o aúdio dizendo resposta incorreta
-      const loadindMusic2 = async()=>{
         const som = new Audio.Sound()
         try{
-
           await som.loadAsync(require('../../../assets/audios/incorreta.mp3'))
           await som.playAsync()
 
         }catch(error){
           console.log(error)
         }
-      }
-      loadindMusic2()
+        await som.stopAsync();
 
-      Alert.alert('Resposta Errada!')
+      Alert.alert('Resposta Incorrecta!')
       props.navigation.navigate('Home')
       setPontos(0) 
     }
