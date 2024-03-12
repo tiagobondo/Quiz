@@ -8,6 +8,7 @@ import {
       StatusBar
 } from 'react-native';
 import {AntDesign} from '@expo/vector-icons'
+import { Audio } from 'expo-av'
 
 import {styles} from './style'
 import {Title} from '../../components/Title'
@@ -145,8 +146,22 @@ export default function Quiz(props){
     const resposta = questaoAtual.respostaCerta;
 
     if(resposta ===selectedOption){
-      Alert.alert('Resposta Certa!')
       setPontos(resultado = pontos + 2)
+
+      //Se a questão for correcta então reproduza o aúdio dizendo resposta correcta
+      const loadingMusic1 = async()=>{
+        const som = new Audio.Sound()
+
+        try{
+          await som.loadAsync(require('../../../assets/audios/correta.mp3'))
+          await som.playAsync();
+
+        }catch(error){
+          console.log(error)
+        }
+      }
+      loadingMusic1()
+      Alert.alert('Resposta Certa!')
 
       //Se já arrecadou 24 pontos então vá para a 2ª fase do jogo
       if(resultado == 24){
@@ -158,8 +173,23 @@ export default function Quiz(props){
         
     }
     else{
-      props.navigation.navigate('Home')
+
+      //Se a questão for errada então reproduza o aúdio dizendo resposta incorreta
+      const loadindMusic2 = async()=>{
+        const som = new Audio.Sound()
+        try{
+
+          await som.loadAsync(require('../../../assets/audios/incorreta.mp3'))
+          await som.playAsync()
+
+        }catch(error){
+          console.log(error)
+        }
+      }
+      loadindMusic2()
+
       Alert.alert('Resposta Errada!')
+      props.navigation.navigate('Home')
       setPontos(0) 
     }
 
