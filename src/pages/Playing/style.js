@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native'
+import {Platform, StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
   container:{
@@ -29,17 +29,20 @@ const styles = StyleSheet.create({
     marginBottom:10,
     borderRadius:30,
     padding:20,
+    justifyContent: 'center',
+    marginBottom: 10
+    
   },
 
   questao: {
-    fontSize:16,
+    fontSize: Platform.OS == 'ios'?17:16,
     color:'#fff',
     textAlign:'center',
   }, 
 
   respostas: {
     width:'97%',
-    height:45,
+    height:Platform.OS == 'ios'?50:45,
     fontSize:16,
     textAlign:'center',
     backgroundColor:'#d4002e',
@@ -53,16 +56,17 @@ const styles = StyleSheet.create({
     color:'#fff',
     textAlign:'center',
     padding:10,
-    fontSize:16
+    fontSize: Platform.OS == 'ios'?17:16
   },
 
   pontos: {
     alignSelf:'flex-start',
     marginLeft:'2%',
-    fontSize:16,
+    fontSize: Platform.OS == 'ios'?17:16,
     color:'#fff',
     fontWeight:'bold',
     marginTop:'10%',
+    marginBottom: 10
   },
 
   containerHelp: {
@@ -72,62 +76,39 @@ const styles = StyleSheet.create({
   },
 
   buttonCerta:{
-    height:50,
-    width:50,
-    borderWidth:1,
-    borderColor:'#fff',
-    backgroundColor:'#00000071',
-    padding:10,
-    borderRadius:100,   
-    marginRight:10
+    height:Platform.OS == 'ios'?60:60,
+    width:Platform.OS == 'ios'?60:60,
+    padding: Platform.OS == 'ios'?10:10,
   },
 
   buttonCerta2:{
     position: 'absolute',
+    top: 13,
+    left: 12
 },
 
   buttonDesistir:{
-    height:50,
-    width:50,
-    borderWidth:1,
-    borderColor:'#fff',
-    backgroundColor:'#00000071',
-    padding:10,
-    borderRadius:100,
-    marginRight:10
+    height:Platform.OS == 'ios'?60:60,
+    width:Platform.OS == 'ios'?60:60,
+    padding: Platform.OS == 'ios'?10:10,
   },
 
   buttonAmigo:{
-    height:50,
-    width:50,
-    borderWidth:1,
-    borderColor:'#fff',
+    height:Platform.OS == 'ios'?60:60,
+    width:Platform.OS == 'ios'?60:60,
+    padding: Platform.OS == 'ios'?10:10,
+  },
+
+  buttonHelp: {
+    margin: 2,
     backgroundColor:'#00000071',
-    padding:10,
-    borderRadius:100,
-  },
-
-  textAmigo:{
-    textAlign:'center',
-    fontSize:16,
-    fontWeight:'bold',
-    color:'#fff'
-  },
-
-  textCerta:{
-    textAlign:'center',
-    fontSize:16,
-    fontWeight:'bold',
-    marginRight:10,
-    color:'#fff'
-
-  },
-  textDesistir:{
-    textAlign:'center',
-    fontSize:16,
-    fontWeight:'bold',
-    marginRight:10,
-    color:'#fff'
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 100,
+    paddingLeft: 10,
+    paddingTop: 10,
+    borderWidth: 1,
+    borderColor: '#fff'
   },
 
   containerLoading: {

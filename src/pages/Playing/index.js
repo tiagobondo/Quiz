@@ -157,8 +157,6 @@ export default function Quiz(props){
         }catch(error){
           console.log(error)
         }
-        await som.stopAsync();
-
       Alert.alert('Resposta Correcta!')
         setNextQuestion();   
     }
@@ -173,7 +171,6 @@ export default function Quiz(props){
         }catch(error){
           console.log(error)
         }
-        await som.stopAsync();
 
       Alert.alert('Resposta Incorrecta!')
       props.navigation.navigate('Home')
@@ -252,46 +249,46 @@ export default function Quiz(props){
 
       <View style={styles.containerHelp}>
 
-        <TouchableOpacity onPress={()=>respostaAjuda()} activeOpacity={0.5}>
+        <TouchableOpacity onPress={()=>respostaAjuda()} activeOpacity={0.5} style={styles.buttonHelp}>
           <AntDesign style={styles.buttonCerta}
             name='check'
             size={30}
             color={'#ffff'}
           />
-           <Text style={styles.textCerta}>Apoio1</Text>
+
         </TouchableOpacity>
 
         <TouchableOpacity onPress={()=>Alert.alert('Informamos que...', 'Já utilizou o seu apoio1')} activeOpacity={0.5} style={[styles.buttonCerta2,
           {display:visButton}
-        ]}>
+        ]} >
           <AntDesign style={styles.buttonCerta}
             name='check'
             size={30}
             color={'#fff'}
           />
-           <Text style={styles.textCerta}>Apoio1</Text>
+
         </TouchableOpacity>
 
         
        
 
-        <TouchableOpacity onPress={()=>setModalConfirmation(true)} activeOpacity={0.5}>
+        <TouchableOpacity onPress={()=>setModalConfirmation(true)} activeOpacity={0.5} style={styles.buttonHelp}>
           <AntDesign style={styles.buttonDesistir}
             name='close'
             size={30}
             color={'#ffff'}
           />
-           <Text style={styles.textDesistir}>Desistir</Text>
+
         </TouchableOpacity>
        
 
-        <TouchableOpacity activeOpacity={0.5}>
+        <TouchableOpacity activeOpacity={0.5} style={styles.buttonHelp}>
           <AntDesign style={styles.buttonAmigo}
             name='user'
             size={30}
             color={'#ffff'}
           />
-          <Text style={styles.textAmigo}>Apoio2</Text>
+
         </TouchableOpacity>
         
       </View>

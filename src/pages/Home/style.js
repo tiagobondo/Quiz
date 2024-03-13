@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   buttonPlay:{
     marginTop:'15%',
     width:'90%',
-    height:45,
+    height:Platform.OS == 'ios'?50:45,
     backgroundColor:'#d4002e',
     borderRadius:5,
     borderWidth:1,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
 buttonHome:{
     marginTop:'2.5%',
     width:'90%',
-    height:45,
+    height:Platform.OS == 'ios'?50:45,
     backgroundColor:'#d4002e',
     borderRadius:5,
     borderWidth:1,
