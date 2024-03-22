@@ -1,8 +1,8 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   title:{
-    fontSize:30,
+    fontSize:Platform.OS == 'ios'?30:25,
     color:'#fff',
     fontWeight:'bold',
     textAlign:'center',

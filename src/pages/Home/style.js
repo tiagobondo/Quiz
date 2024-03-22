@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,14 +9,14 @@ const styles = StyleSheet.create({
   },
 
   Title: {
-    fontSize:34,
+    fontSize:Platform.OS == 'ios'?34:24,
     fontWeight: 'bold',
     color:'#fff'
   },
 
   SubTitle: {
     color:'yellow',
-    fontSize:24,
+    fontSize:Platform.OS == 'ios'?24:18,
     alignSelf:'flex-end',
     marginRight:'12%'
   },

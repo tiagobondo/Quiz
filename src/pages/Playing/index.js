@@ -5,7 +5,8 @@ import {
       Text,
       Alert,
       Modal,
-      StatusBar
+      StatusBar,
+      Platform
 } from 'react-native';
 import {AntDesign} from '@expo/vector-icons'
 import { Audio } from 'expo-av'
@@ -252,7 +253,7 @@ export default function Quiz(props){
         <TouchableOpacity onPress={()=>respostaAjuda()} activeOpacity={0.5} style={styles.buttonHelp}>
           <AntDesign style={styles.buttonCerta}
             name='check'
-            size={30}
+            size={Platform.OS == 'ios'?30:20}
             color={'#ffff'}
           />
 
@@ -263,7 +264,7 @@ export default function Quiz(props){
         ]} >
           <AntDesign style={styles.buttonCerta}
             name='check'
-            size={30}
+            size={Platform.OS == 'ios'?30:20}
             color={'#fff'}
           />
 
@@ -275,7 +276,7 @@ export default function Quiz(props){
         <TouchableOpacity onPress={()=>setModalConfirmation(true)} activeOpacity={0.5} style={styles.buttonHelp}>
           <AntDesign style={styles.buttonDesistir}
             name='close'
-            size={30}
+            size={Platform.OS == 'ios'?30:20}
             color={'#ffff'}
           />
 
@@ -285,7 +286,7 @@ export default function Quiz(props){
         <TouchableOpacity activeOpacity={0.5} style={styles.buttonHelp}>
           <AntDesign style={styles.buttonAmigo}
             name='user'
-            size={30}
+            size={Platform.OS == 'ios'?30:20}
             color={'#ffff'}
           />
 

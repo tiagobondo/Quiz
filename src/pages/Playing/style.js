@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
 
   questao: {
-    fontSize: Platform.OS == 'ios'?17:16,
+    fontSize: Platform.OS == 'ios'?17:12,
     color:'#fff',
     textAlign:'center',
   }, 
@@ -43,13 +43,15 @@ const styles = StyleSheet.create({
   respostas: {
     width:'97%',
     height:Platform.OS == 'ios'?50:45,
-    fontSize:16,
+    fontSize: Platform.OS == 'ios'?17:10,
     textAlign:'center',
     backgroundColor:'#d4002e',
     marginBottom:10,
     borderRadius:5,
     borderWidth:1,
-    borderColor:'#ffffff2d'
+    borderColor:'#ffffff2d',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 
   textQuestoes:{
@@ -76,9 +78,9 @@ const styles = StyleSheet.create({
   },
 
   buttonCerta:{
-    height:Platform.OS == 'ios'?60:60,
-    width:Platform.OS == 'ios'?60:60,
-    padding: Platform.OS == 'ios'?10:10,
+    height:Platform.OS == 'ios'?60:40,
+    width:Platform.OS == 'ios'?60:40,
+    padding: Platform.OS == 'ios'?10:5,
   },
 
   buttonCerta2:{
@@ -88,15 +90,15 @@ const styles = StyleSheet.create({
 },
 
   buttonDesistir:{
-    height:Platform.OS == 'ios'?60:60,
-    width:Platform.OS == 'ios'?60:60,
-    padding: Platform.OS == 'ios'?10:10,
+    height:Platform.OS == 'ios'?60:40,
+    width:Platform.OS == 'ios'?60:40,
+    padding: Platform.OS == 'ios'?10:5,
   },
 
   buttonAmigo:{
-    height:Platform.OS == 'ios'?60:60,
-    width:Platform.OS == 'ios'?60:60,
-    padding: Platform.OS == 'ios'?10:10,
+    height:Platform.OS == 'ios'?60:40,
+    width:Platform.OS == 'ios'?60:40,
+    padding: Platform.OS == 'ios'?10:5,
   },
 
   buttonHelp: {
@@ -134,14 +136,14 @@ const styles = StyleSheet.create({
   windowConfirmation: {
     backgroundColor: '#fff',
     width:200,
-    height: 100,
+    height: Platform.OS == 'ios'?100:110,
     borderRadius: 5
   },
 
   textConfirmation: {
     textAlign: 'center',
-    fontSize: 20,
-    padding: 10,
+    fontSize: Platform.OS == 'ios'?20:18,
+    padding: Platform.OS == 'ios'?10:5,
     color:'#d4002e'
   },
 
@@ -152,32 +154,32 @@ const styles = StyleSheet.create({
   },
 
   buttonYes: {
-    padding: 10,
+    padding: Platform.OS == 'ios'?10:5,
     backgroundColor:'#d4002e',
     marginRight: 5,
-    width:62,
+    width:Platform.OS == 'ios'?62:50,
     borderRadius: 5
     
   },
 
   textBUttonYes: {
     textAlign:'center',
-    fontSize:18,
+    fontSize:Platform.OS == 'ios'?18:16,
     color: '#fff'
   },
 
   buttonNon: {
-    padding: 10,
+    padding: Platform.OS == 'ios'?10:5,
     borderColor:'#d4002e',
     borderWidth:1,
-    width:62,
+    width:Platform.OS == 'ios'?62:55,
     borderRadius: 5,
-    marginLeft:5
+    marginLeft:5,
   },
 
   textBUttonNon: {
     textAlign:'center',
-    fontSize:18,
+    fontSize:Platform.OS == 'ios'?18:15,
     color: '#d4002e'
   },
   containerEnd: {
