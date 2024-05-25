@@ -46,7 +46,7 @@ export default function About(){
         SOFTWARE.
        </Text>
 
-       <Text style={styles.textAbout}>Copyright (c) 2024 Calemba Tandu Pedro João & Stélvio Silva & Tiago Pedro Menenga Bondo</Text>
+       <Text style={styles.textAbout}>Copyright (c) 2024 Tiago Pedro Menenga Bondo</Text>
        
        </ScrollView>
     </View> 
