@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
 
   questao: {
-    fontSize: Platform.OS == 'ios'?17:12,
+    fontSize: Platform.OS == 'ios'?17:14,
     color:'#fff',
     textAlign:'center',
   }, 
